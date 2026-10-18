@@ -1,16 +1,105 @@
-# React + Vite
+# 🌿 Sage Community
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### React × Supabase で作ったシンプルなSNSアプリ
 
-Currently, two official plugins are available:
+**Sage Community** は、日々の出来事や気持ちを気軽に投稿し、ユーザー同士で共有できるSNSアプリです。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Reactの学習成果として制作し、ユーザー認証からデータベース連携、投稿機能、ページネーションまで実装しました。
 
-## React Compiler
+落ち着いたセージグリーンとクリーム色を基調に、温かみのあるデザインを目指しました。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 スクリーンショット
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Sage Communityのメイン画面
+
+※ スクリーンショットは後ほど追加予定です。
+
+---
+
+## 🛠 使用技術
+
+| 技術 | 用途 |
+|---|---|
+| React | UI・コンポーネントの構築 |
+| Vite | 開発環境・本番ビルド |
+| JavaScript | アプリケーションの処理 |
+| Tailwind CSS | デザイン・レスポンシブ対応 |
+| Supabase | 認証・データベース |
+| React Router | ページ遷移 |
+| Git / GitHub | ソースコード管理 |
+
+---
+
+## ✨ 実装した機能
+
+- **ユーザー登録**：メールアドレスとパスワードによる新規登録
+- **ログイン・ログアウト**：Supabase Authenticationによる認証
+- **投稿作成**：ログインユーザーによるテキスト投稿
+- **投稿一覧**：投稿者名と投稿内容の表示
+- **投稿削除**：自分の投稿のみ削除操作が可能
+- **ページネーション**：投稿を5件ずつ表示
+- **レスポンシブデザイン**：画面サイズに合わせたレイアウト
+
+---
+
+## 💡 学習で工夫したこと
+
+### 1. コンポーネントの分割
+
+投稿表示やページネーションを独立したコンポーネントに分割し、再利用しやすい構成を意識しました。
+
+### 2. React Hooksによる状態管理
+
+`useState`、`useEffect`、`useContext` を活用し、投稿データやログイン状態を管理しました。
+
+### 3. Supabaseとの連携
+
+認証機能とデータベースを連携させ、投稿の取得・作成・削除を実装しました。
+
+投稿者名の表示では、`profiles` テーブルとビューを利用する方法を学びました。
+
+### 4. エラーへの対応
+
+開発中には、Supabaseのアクセス権限やRLSに関するエラーが発生しました。
+
+エラーメッセージを確認しながら原因を調査し、SQLの権限設定やReact側のデータ取得処理を修正しました。
+
+### 5. オリジナルデザインへの変更
+
+講座の基本デザインをもとに、配色・余白・カード・ヘッダーなどをカスタマイズしました。
+
+---
+
+## 🚀 アプリ公開URL
+
+**公開準備中**
+
+Xserverへのデプロイ完了後、こちらにURLを追加します。
+
+---
+
+## 📂 ソースコード
+
+GitHub： https://github.com/KenjiNakano980/sns-app
+
+---
+
+## 📚 制作について
+
+UdemyのReact講座を参考に制作した学習用アプリです。
+
+講座で学んだ内容を実装するだけでなく、発生したエラーの解決やデザインのカスタマイズにも取り組みました。
+
+今後は、プロフィール編集、投稿への「いいね」、画像投稿などの機能追加も検討しています。
+
+---
+
+## 🏷 技術タグ
+
+`#React` `#JavaScript` `#Vite` `#TailwindCSS` `#Supabase` `#WebDevelopment` `#プログラミング学習` `#ポートフォリオ`
+
+---
+
+**Made with React 🌿 — Sage Community**
