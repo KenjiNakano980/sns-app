@@ -14,8 +14,11 @@ export const authRepository = {
     if (!data.user) throw new Error('ユーザー登録に失敗しました。');
 
     return {
-      ...data.user,
-      userName: data.user.user_metadata?.name ?? '',
+      user: {
+        ...data.user,
+        userName: data.user.user_metadata?.name ?? '',
+      },
+      session: data.session,
     };
   },
 
@@ -33,7 +36,7 @@ export const authRepository = {
       userName: data.user.user_metadata?.name ?? '',
     };
   },
-    async getCurrentUser() {
+  async getCurrentUser() {
     const { data, error } = await supabase.auth.getSession();
 
     if (error) throw error;
@@ -46,7 +49,7 @@ export const authRepository = {
       userName: user.user_metadata?.name ?? '',
     };
   },
-    async signout() {
+  async signout() {
     const { error } = await supabase.auth.signOut({
       scope: 'local',
     });
